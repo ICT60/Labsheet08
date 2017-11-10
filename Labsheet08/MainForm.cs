@@ -22,7 +22,13 @@ namespace Labsheet08
 
         void _Initialize()
         {
-            lblPlusResult.Text = String.Empty;
+            lblPlusResult.Text = "0";
+            txtNumPlusA.Text = "0";
+            txtNumPlusB.Text = "0";
+
+            lblMinusResult.Text = "0";
+            txtNumMinusA.Text = "0";
+            txtNumMinusB.Text = "0";
         }
 
         void _UpdateUI()
@@ -52,7 +58,18 @@ namespace Labsheet08
 
         void _UpdateMinus()
         {
+            decimal numA;
+            decimal numB;
 
+            var isCanParseA = decimal.TryParse(txtNumMinusA.Text, out numA);
+            var isCanParseB = decimal.TryParse(txtNumMinusB.Text, out numB);
+
+            if (isCanParseA && isCanParseB) {
+                lblMinusResult.Text = (numA - numB).ToString();
+            }
+            else {
+                lblMinusResult.Text = "Error~";
+            }
         }
 
         void _UpdateMutiply()
