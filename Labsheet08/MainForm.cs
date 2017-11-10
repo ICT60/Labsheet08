@@ -57,7 +57,12 @@ namespace Labsheet08
             var isCanParseB = decimal.TryParse(txtNumPlusB.Text, out numB);
 
             if (isCanParseA && isCanParseB) {
-                lblPlusResult.Text = (numA + numB).ToString();
+                try {
+                    lblPlusResult.Text = (numA + numB).ToString();
+                }
+                catch (OverflowException e) {
+                    lblPlusResult.Text = "Overflow..";
+                }
             }
             else {
                 lblPlusResult.Text = "Error, Please enter only number.";
@@ -73,7 +78,12 @@ namespace Labsheet08
             var isCanParseB = decimal.TryParse(txtNumMinusB.Text, out numB);
 
             if (isCanParseA && isCanParseB) {
-                lblMinusResult.Text = (numA - numB).ToString();
+                try {
+                    lblMinusResult.Text = (numA - numB).ToString();
+                }
+                catch (OverflowException e) {
+                    lblMinusResult.Text = "Overflow..";
+                }
             }
             else {
                 lblMinusResult.Text = "Error, Please enter only number.";
@@ -117,7 +127,7 @@ namespace Labsheet08
                     lblDivideResult.Text = "Overflow..";
                 }
                 catch (DivideByZeroException e) {
-                    lblDivideResult.Text = "Number B can't be : 0";
+                    lblDivideResult.Text = "Number /'B/' can't be : 0";
                 }
             }
             else {
