@@ -36,7 +36,18 @@ namespace Labsheet08
 
         void _UpdatePlus()
         {
+            decimal numA;
+            decimal numB;
 
+            var isCanParseA = decimal.TryParse(txtNumPlusA.Text, out numA);
+            var isCanParseB = decimal.TryParse(txtNumPlusB.Text, out numB);
+
+            if (isCanParseA && isCanParseB) {
+                lblPlusResult.Text = (numA + numB).ToString();
+            }
+            else {
+                lblPlusResult.Text = "Error~";
+            }
         }
 
         void _UpdateMinus()
@@ -56,16 +67,14 @@ namespace Labsheet08
 
         void _UpdateMessage()
         {
-            if (txtMessage.Text.Length > 0)
-            {
+            if (txtMessage.Text.Length > 0) {
                 var message = String.Format("You enter text : \n \"{0}\"", txtMessage.Text);
                 MessageBox.Show(message,
                     "Message Result",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-            else
-            {
+            else {
                 MessageBox.Show("You didn't enter any text..",
                     "Message Result",
                     MessageBoxButtons.OK,

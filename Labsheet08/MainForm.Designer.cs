@@ -33,6 +33,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPlusResult = new System.Windows.Forms.Label();
+            this.txtNumPlusA = new System.Windows.Forms.TextBox();
+            this.txtNumPlusB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRun
@@ -79,11 +83,47 @@
             this.lblPlusResult.TabIndex = 4;
             this.lblPlusResult.Text = "Plus Result";
             // 
+            // txtNumPlusA
+            // 
+            this.txtNumPlusA.Location = new System.Drawing.Point(99, 39);
+            this.txtNumPlusA.Name = "txtNumPlusA";
+            this.txtNumPlusA.Size = new System.Drawing.Size(82, 20);
+            this.txtNumPlusA.TabIndex = 5;
+            // 
+            // txtNumPlusB
+            // 
+            this.txtNumPlusB.Location = new System.Drawing.Point(223, 39);
+            this.txtNumPlusB.Name = "txtNumPlusB";
+            this.txtNumPlusB.Size = new System.Drawing.Size(82, 20);
+            this.txtNumPlusB.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(196, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "+";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(338, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "=";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 371);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtNumPlusB);
+            this.Controls.Add(this.txtNumPlusA);
             this.Controls.Add(this.lblPlusResult);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -104,6 +144,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPlusResult;
+        private System.Windows.Forms.TextBox txtNumPlusA;
+        private System.Windows.Forms.TextBox txtNumPlusB;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
