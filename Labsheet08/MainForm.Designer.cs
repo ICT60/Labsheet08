@@ -44,15 +44,15 @@
             this.lblMinusResult = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblMultiplyResult = new System.Windows.Forms.Label();
+            this.txtNumMultiplyA = new System.Windows.Forms.TextBox();
+            this.txtNumMultiplyB = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lblDivideResult = new System.Windows.Forms.Label();
+            this.txtNumDivideA = new System.Windows.Forms.TextBox();
+            this.txtNumDivideB = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -192,28 +192,28 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Multiply";
             // 
-            // label10
+            // lblMultiplyResult
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(381, 94);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Multiply Result";
+            this.lblMultiplyResult.AutoSize = true;
+            this.lblMultiplyResult.Location = new System.Drawing.Point(381, 94);
+            this.lblMultiplyResult.Name = "lblMultiplyResult";
+            this.lblMultiplyResult.Size = new System.Drawing.Size(75, 13);
+            this.lblMultiplyResult.TabIndex = 10;
+            this.lblMultiplyResult.Text = "Multiply Result";
             // 
-            // textBox3
+            // txtNumMultiplyA
             // 
-            this.textBox3.Location = new System.Drawing.Point(99, 91);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(82, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtNumMultiplyA.Location = new System.Drawing.Point(99, 91);
+            this.txtNumMultiplyA.Name = "txtNumMultiplyA";
+            this.txtNumMultiplyA.Size = new System.Drawing.Size(82, 20);
+            this.txtNumMultiplyA.TabIndex = 11;
             // 
-            // textBox4
+            // txtNumMultiplyB
             // 
-            this.textBox4.Location = new System.Drawing.Point(223, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(82, 20);
-            this.textBox4.TabIndex = 12;
+            this.txtNumMultiplyB.Location = new System.Drawing.Point(223, 91);
+            this.txtNumMultiplyB.Name = "txtNumMultiplyB";
+            this.txtNumMultiplyB.Size = new System.Drawing.Size(82, 20);
+            this.txtNumMultiplyB.TabIndex = 12;
             // 
             // label11
             // 
@@ -242,28 +242,28 @@
             this.label13.TabIndex = 9;
             this.label13.Text = "Divide";
             // 
-            // label14
+            // lblDivideResult
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(381, 120);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Divide Result";
+            this.lblDivideResult.AutoSize = true;
+            this.lblDivideResult.Location = new System.Drawing.Point(381, 120);
+            this.lblDivideResult.Name = "lblDivideResult";
+            this.lblDivideResult.Size = new System.Drawing.Size(70, 13);
+            this.lblDivideResult.TabIndex = 10;
+            this.lblDivideResult.Text = "Divide Result";
             // 
-            // textBox5
+            // txtNumDivideA
             // 
-            this.textBox5.Location = new System.Drawing.Point(99, 117);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(82, 20);
-            this.textBox5.TabIndex = 11;
+            this.txtNumDivideA.Location = new System.Drawing.Point(99, 117);
+            this.txtNumDivideA.Name = "txtNumDivideA";
+            this.txtNumDivideA.Size = new System.Drawing.Size(82, 20);
+            this.txtNumDivideA.TabIndex = 11;
             // 
-            // textBox6
+            // txtNumDivideB
             // 
-            this.textBox6.Location = new System.Drawing.Point(223, 117);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(82, 20);
-            this.textBox6.TabIndex = 12;
+            this.txtNumDivideB.Location = new System.Drawing.Point(223, 117);
+            this.txtNumDivideB.Name = "txtNumDivideB";
+            this.txtNumDivideB.Size = new System.Drawing.Size(82, 20);
+            this.txtNumDivideB.TabIndex = 12;
             // 
             // label15
             // 
@@ -287,20 +287,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 371);
+            this.ClientSize = new System.Drawing.Size(575, 371);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtNumDivideB);
+            this.Controls.Add(this.txtNumMultiplyB);
             this.Controls.Add(this.txtNumMinusB);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtNumDivideA);
+            this.Controls.Add(this.lblDivideResult);
+            this.Controls.Add(this.txtNumMultiplyA);
+            this.Controls.Add(this.lblMultiplyResult);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtNumMinusA);
             this.Controls.Add(this.label9);
@@ -341,15 +341,15 @@
         private System.Windows.Forms.Label lblMinusResult;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblMultiplyResult;
+        private System.Windows.Forms.TextBox txtNumMultiplyA;
+        private System.Windows.Forms.TextBox txtNumMultiplyB;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label lblDivideResult;
+        private System.Windows.Forms.TextBox txtNumDivideA;
+        private System.Windows.Forms.TextBox txtNumDivideB;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
     }

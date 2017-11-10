@@ -29,13 +29,21 @@ namespace Labsheet08
             lblMinusResult.Text = "0";
             txtNumMinusA.Text = "0";
             txtNumMinusB.Text = "0";
+
+            lblMultiplyResult.Text = "0";
+            txtNumMultiplyA.Text = "0";
+            txtNumMultiplyB.Text = "0";
+
+            lblDivideResult.Text = "0";
+            txtNumDivideA.Text = "0";
+            txtNumDivideB.Text = "1";
         }
 
         void _UpdateUI()
         {
             _UpdatePlus();
             _UpdateMinus();
-            _UpdateMutiply();
+            _UpdateMultiply();
             _UpdateDivide();
             _UpdateMessage();
         }
@@ -52,7 +60,7 @@ namespace Labsheet08
                 lblPlusResult.Text = (numA + numB).ToString();
             }
             else {
-                lblPlusResult.Text = "Error~";
+                lblPlusResult.Text = "Error, Please enter only number.";
             }
         }
 
@@ -68,18 +76,53 @@ namespace Labsheet08
                 lblMinusResult.Text = (numA - numB).ToString();
             }
             else {
-                lblMinusResult.Text = "Error~";
+                lblMinusResult.Text = "Error, Please enter only number.";
             }
         }
 
-        void _UpdateMutiply()
+        void _UpdateMultiply()
         {
+            decimal numA;
+            decimal numB;
 
+            var isCanParseA = decimal.TryParse(txtNumMultiplyA.Text, out numA);
+            var isCanParseB = decimal.TryParse(txtNumMultiplyB.Text, out numB);
+
+            if (isCanParseA && isCanParseB) {
+                try {
+                    lblMultiplyResult.Text = (numA * numB).ToString();
+                }
+                catch (OverflowException e) {
+                    lblMultiplyResult.Text = "Overflow..";
+                }
+            }
+            else {
+                lblMultiplyResult.Text = "Error, Please enter only number.";
+            }
         }
 
         void _UpdateDivide()
         {
+            decimal numA;
+            decimal numB;
 
+            var isCanParseA = decimal.TryParse(txtNumDivideA.Text, out numA);
+            var isCanParseB = decimal.TryParse(txtNumDivideB.Text, out numB);
+
+            if (isCanParseA && isCanParseB) {
+                try {
+                    lblDivideResult.Text = (numA / numB).ToString();
+                }
+                catch (OverflowException e) {
+                    lblDivideResult.Text = "Overflow..";
+                }
+                catch (DivideByZeroException e) {
+                    lblDivideResult.Text = "Number B can't be : 0";
+                }
+            }
+            else {
+                lblDivideResult.Text = "Error, Please enter only number.";
+            }
         }
 
         void _UpdateMessage()
