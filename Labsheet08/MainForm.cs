@@ -127,7 +127,7 @@ namespace Labsheet08
                     lblDivideResult.Text = "Overflow..";
                 }
                 catch (DivideByZeroException e) {
-                    lblDivideResult.Text = "Number /'B/' can't be : 0";
+                    lblDivideResult.Text = "Number 'B' can't be : 0";
                 }
             }
             else {
